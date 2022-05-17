@@ -3,12 +3,14 @@ nav {
   justify-content: space-between;
   padding: 0 24px;
   border-bottom: 1px solid var(--very-light-pink);
+  margin-bottom: 5px;
 }
 .menu {
   display: none;
 }
-.logo {
+.nav-logo {
   width: 100px;
+  cursor: pointer;
 }
 .navbar-left ul,
 .navbar-right ul {
@@ -39,12 +41,18 @@ nav {
   color: var(--hospital-green);
 }
 .navbar-email {
-  color: var(--very-light-pink);
-  font-size: var(--sm);
-  margin-right: 12px;
+  margin-right: 20px;
 }
+
+.navbar-email .userIcon {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
 .navbar-shopping-cart {
   position: relative;
+  cursor: pointer;
 }
 .navbar-shopping-cart div {
   width: 16px;

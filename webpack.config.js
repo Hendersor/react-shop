@@ -12,6 +12,13 @@ module.exports = {
   mode: "development",
   resolve: {
     extensions: [".js", ".jsx"],
+    alias: {
+      "@components": path.resolve(__dirname, "src/components/"),
+      "@containers": path.resolve(__dirname, "src/containers/"),
+      "@styles": path.resolve(__dirname, "src/styles/"),
+      "@icons": path.resolve(__dirname, "src/assets/icons/"),
+      "@logos": path.resolve(__dirname, "src/assets/logos/"),
+    },
   },
   module: {
     rules: [
@@ -34,18 +41,19 @@ module.exports = {
         test: /\.(css|scss)$/i,
         use: ["style-loader", "css-loader", "sass-loader"],
       },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        type: "asset",
+      },
     ],
   },
   plugins: [
-    //(19)
     new HtmlWebpackPlugin({
-      //(20)
-      template: "./public/index.html", //(22)
-      filename: "./index.html", //(23)
+      template: "./public/index.html",
+      filename: "./index.html",
     }),
     new MiniCssExtractPlugin({
-      //(24)
-      filename: "[name].css", //(25)
+      filename: "[name].css",
     }),
   ],
   devServer: {

@@ -1,5 +1,13 @@
 @import "vars";
 
+.inputText {
+  border: none;
+  background-color: var(--text-input-field);
+  height: 35px;
+  width: 250px;
+  border-radius: 5px;
+}
+
 .ProductList {
   display: grid;
   grid-template-columns: repeat(auto-fill, 240px);
